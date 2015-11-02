@@ -1,0 +1,13 @@
+﻿@model SaluteWebSite.Models.Message
+
+@{
+    ViewBag.Title = "Create Page";
+}
+
+<form asp-controller="message" asp-action="edit" asp-anti-forgery="true" method="post">
+    @Html.AntiForgeryToken()
+    Test
+    <label asp-for="MessageTitle"></label> <input asp-for="MessageTitle" /> <span asp-validation-for="MessageTitle"></span> <br />
+    <label asp-for="MessageContent"></label><input asp-for="MessageContent" /> <span asp-validation-for="MessageContent"></span> <br />
+    <input type="submit" value="Edit" />
+</form>
